@@ -6,23 +6,88 @@
     <meta name="description" content="Наша первая HTML страница">
     <meta name="keywords" content="Ключевое слово 1, ключевое слово 2">
     <title>Самый длинный тайтл в мире, который не поместится в строке браузера</title>
+
+    <!-- Scripts block BEGIN -->
     <script type="text/javascript">
+        // Объявляем переменную j и присваиваем ей значение 10
         var j = 10;
         console.log(j);
     </script>
-    <script src="index.js"></script>
+    <script src="/index.js" type="text/javascript"></script>
+    <!-- Scripts block END -->
+
+    <!-- Styles block BEGIN -->
     <style>
         h1, h2, h3, h4, h5, h6 {
             background: red;
+            color: #bbaa00;
+            box-shadow: aqua;
+            border: 1px;
+        }
+
+        .table {
+            background: #ba0;
+        }
+
+        .table .row {
+            background: green;
+            color: red;
+        }
+        thead {
+            font-weight: bold;
+            text-align: center;
+            background: darkgray;
+        }
+        [data-null] {
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background: lightgray;
         }
     </style>
+    <link rel="stylesheet" href="index.css">
+    <!-- Styles block END -->
 </head>
 <body>
 <h1>Привет</h1>
-<h2>Привет</h2>
-<h3>Привет</h3>
-<h4>Привет</h4>
-<h5>Привет</h5>
-<h6>Привет</h6>
+<table style="border: 1px solid blueviolet;">
+    <thead>
+    <tr><!-- Строка -->
+        <td id="td-1" data-id="1" name="td-name-one" class="cell">Number</td> <!-- Ячейка -->
+        <td class="cell" data-id="1" name="td-name-two">Name</td>
+        <td class="cell">Phone</td>
+        <td class="cell">Email</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr><!-- Строка -->
+        <td class="cell">1</td> <!-- Ячейка -->
+        <td class="cell">Миша</td>
+        <td class="cell">+7 (903) 953-73-73</td>
+        <td class="cell">m.sivolobov@qeep.pro</td>
+    </tr>
+    <tr><!-- Строка -->
+        <td class="cell">2</td> <!-- Ячейка -->
+        <td class="cell">Саша</td>
+        <td class="cell" data-null>—</td>
+        <td class="cell" data-null>—</td>
+    </tr>
+    <tr><!-- Строка -->
+        <td class="cell">3</td> <!-- Ячейка -->
+        <td class="cell">Дима</td>
+        <td class="cell" data-null>22-22-22</td>
+        <td class="cell" data-null>—</td>
+    </tr>
+    <tr><!-- Строка -->
+        <td class="cell">4</td> <!-- Ячейка -->
+        <td class="cell">Олег</td>
+        <td class="cell" data-null>—</td>
+        <td class="cell" data-null>test@qeep.pro</td>
+    </tr>
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
 </body>
 </html>
